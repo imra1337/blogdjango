@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+{% load static %}
+<head>
+	<title>Мой блог</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Мой блог</h1>
+			<nav>
+				<ul>
+					{% if user.is_authenticated %}
+					<li><a href="{% url 'register' %}">Регистрация</a></li>
+					<li><a href="{% url 'login' %}">Вход</a></li>
+					{% endif %}
+					<li><a href="/">Главная</a></li>
+
+					<li><a href="{% url 'register' %}"> Регистрация </a></li>
+
+					<li><a href="{% url 'login' %}"> Логин </a></li>
+				</ul>
+			</nav>
+        </div>
+    </header>
+
+  {% block content %}
+  {% endblock %}
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Мой блог</p>
+        </div>
+    </footer>
+</body>
+</html>

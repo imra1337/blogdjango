@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+		<div class="article">
+		<h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+		<p class="date">{{ post.date }}</p>
+		<img src="{{ post.img.url }}" alt="" width="500px">
+		<p>{{ post.description }}</p>
+	</div>
+
+	<form action="{% url 'add_comments' post.id %}" method="post">
+		<p>{{ form.name }}</p>
+		<p>{{ form.email }}</p>
+		<p>{{ form.text_comments }}</p>
+		<input type="submit" value="Отправить">
+	</form>
+	{% for comment in post.comments_set.all %}
+		<div class="comment">
+			<p><small>{{ comment.name }} | {{ comment.email }}</small></p>
+			<p>{{ comment.text_comments }}</p>
+		</div>
+	{% endfor %}
+</main>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<main class="container">
+	{% for post in post_list %}
+	<div class="article">
+		<h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+		<p class="date">{{ post.date }}</p>
+		<img src="{{ post.img.url }}" alt="" width="250px">
+		<p>{{ post.description|truncatewords:20 }}</p>
+	</div>
+	{% endfor %}
+</main>
+{% endblock %}

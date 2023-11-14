@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    background-color: #fff;
+    padding: 25px;
+    width: 800px;
+    margin: auto;
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.post h2 {
+    margin: 0;
+}
+
+.date {
+    color: #888;
+}
+
+aside {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.widget {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.comment {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+form {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
